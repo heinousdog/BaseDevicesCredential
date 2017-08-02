@@ -1,22 +1,23 @@
 package com.heinousdog.basedevicescredential;
 
 /**
- * Created by milkteapro on 2017/8/2.
+ * Home button Detect singleton.
+ * Created by heinousdog on 2017/8/2.
  */
 
-public class HomeDetectManager {
+class HomeDetectManager {
     private  static HomeDetectManager ourInstance = new HomeDetectManager();
-    public static HomeDetectManager getInstance(){
+    protected static HomeDetectManager getInstance(){
         return ourInstance;
     }
-    private String lastFocused;
+    private String lastFocused="";
     private HomeDetectManager(){
 
     }
-    public void setLastFocused(String lastFocused){
+    protected void setLastFocused(String lastFocused){
         this.lastFocused=lastFocused;
     }
-    public String getLastFocused(){
+    protected String getLastFocused(){
         return lastFocused;
     }
 }
